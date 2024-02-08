@@ -1,0 +1,21 @@
+<figure {{with .Get "class"}}class="{{.}}"{{end}}>
+    <div class="figure-content-container">
+        <div class="figure-content">
+            {{if .Get "multiple"}}
+                {{$images := split (.Get "src") ","}}
+                {{range $index, $src := $images}}
+                    <a class="figure-img-link" href="{{$src}}" target="_blank">
+                        <img src="{{$src}}">
+                    </a>
+                {{end}}
+            {{else}}
+                <a class="figure-image-link" href="{{.Get "src"}}" target="_blank">
+                    <img src="{{.Get "src"}}" {{with .Get "caption"}}alt="{{.}}"{{end}}>
+                </a>
+            {{end}}
+        </div>
+        {{with .Get "caption"}}
+            <figcaption>{{.}}</figcaption>
+        {{end}}
+    </div>
+</figure>

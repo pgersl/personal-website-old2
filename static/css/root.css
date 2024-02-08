@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=REM:wght@500&family=Ubuntu+Mono&display=swap');
+
+:root {
+    --border: solid 2px var(--accent-clr2);
+    --transition: all 100ms;
+    --gallery-bg-clr: #070B0B;
+    --serif: 'Libre Baskerville', serif;
+    --sans: 'REM', sans-serif;
+    --mono: 'Ubuntu Mono', monospace;
+    --font-size: 15px;
+    --h1-size: 30px;
+    --h2-size: 27px;
+    --h3-size: 24px;
+    --h4-size: 21px;
+    --h5-size: 18px;
+    --header-size: 35px;
+    --tiny-size: 12px;
+}
+
+:root[data-theme="light"] {
+    --bg-clr: #F9FAFA;
+    --bg-clr2: #e7ebeb;
+    --bg-clr3: #cfd3d3;
+    --bg-clr4: #a1a4a4;
+    --txt-clr: #0c1313;
+    --accent-clr: #405F61;
+    --accent-clr2: #667E80;
+    --accent-clr3: #8c9fa0;
+    --accent-clr4: #192626;
+    --accent-clr5: #C5CFCF;
+}
+
+:root[data-theme="dark"] {
+    --bg-clr: #0c1313;
+    --bg-clr2: #536f70;
+    --bg-clr3: #798f90;
+    --bg-clr4: #9fafb0;
+    --txt-clr: #F9FAFA;
+    --accent-clr: #8c9fa0;
+    --accent-clr2: #667E80;
+    --accent-clr3: #405F61;
+    --accent-clr4: #C5CFCF;
+    --accent-clr5: #192626;
+}

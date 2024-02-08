@@ -1,0 +1,37 @@
+<div class="navbar-content-container">
+    <nav class="navbar-content">
+        <div class="navbar-content-wrap">
+            <div class="navbar-content-title-sidebar-toggle">
+                <div class="sidebar-toggle">
+                    <button class="sidebar-toggle-btn">
+                        <i class="sidebar-toggle-icon fa-solid fa-angle-right"></i>
+                    </button>
+                </div>
+                <div class="navbar-content-title">
+                    {{if strings.HasPrefix .RelPermalink "/cs/"}}
+                        <a class="navbar-content-title-link" href="{{.Site.BaseURL}}/cs/">
+                    {{else if strings.HasPrefix .RelPermalink "/fr/"}}
+                        <a class="navbar-content-title-link" href="{{.Site.BaseURL}}/fr/">
+                    {{else}}
+                        <a class="navbar-content-title-link" href="{{.Site.BaseURL}}">
+                        
+                    {{end}}
+                        {{.Site.Title}}
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-toggle">
+                <button class="navbar-toggle-btn">
+                    <i class="navbar-toggle-icon fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="navbar-content-links">
+            {{ range .Site.Menus.main }}
+                <div class="navbar-content-link">
+                    <a class="navbar-content-link-link" href="{{.PageRef}}">{{.Name}}</a>
+                </div>
+            {{end}}
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,22 @@
+<div class="toc">
+    <div class="toc-content">
+        <div class="toc-content-header">
+            <div class="toc-content-header-toggle">
+                <button class="toc-toggle-btn">
+                    <i class="toc-toggle-icon fa-solid fa-list-ul"></i>
+                </button>
+            </div>
+            <div class="toc-content-header-title">
+                {{.Title}}
+            </div>
+            <div class="toc-content-header-go-up">
+                <button class="toc-go-up-btn" onclick="window.scrollTo(0,0)">
+                    <i class="toc-go-up-icon fa-solid fa-angle-up"></i>
+                </button>
+            </div>
+        </div>
+        <div class="toc-content-list">
+            {{.TableOfContents}}
+        </div>
+    </div>
+</div>

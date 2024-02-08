@@ -1,0 +1,28 @@
+[
+    {{- $translationsRange := .Site.RegularPages -}}
+    {{- range $index, $page := $translationsRange -}}
+    {{- $translations := $page.Translations -}}
+    {{- range $transIndex, $translation := $translations -}}
+    {
+      "link": "{{ $translation.RelPermalink }}",
+      "title": "{{ $translation.Title }}",
+      "date": "{{ $translation.Date | time.Format "02/01/2006" | htmlEscape }}",
+      "type": "{{ $translation.Params.type }}",
+      "search": "{{ $translation.Params.search }}",
+      "show": "{{ $translation.Params.show }}"
+    },
+    {{- end }}
+    {{- end }}
+    {{- $totalPages := len .Site.RegularPages -}}
+    {{- $pagesRange := .Site.RegularPages -}}
+    {{- range $index, $page := $pagesRange -}}
+    {
+      "link": "{{ $page.RelPermalink }}",
+      "title": "{{ $page.Title }}",
+      "date": "{{ $page.Date | time.Format "02/01/2006" | htmlEscape }}",
+      "type": "{{ $page.Params.type }}",
+      "search": "{{ $page.Params.search }}",
+      "show": "{{ $page.Params.show }}"
+    }{{ if ne (add $index 1) $totalPages }},{{ end }}
+    {{- end }}
+  ]

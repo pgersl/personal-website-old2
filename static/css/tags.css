@@ -1,0 +1,10 @@
+.tags-header-link {
+    color: var(--accent-clr);
+    text-decoration: none;
+}
+.tags-header-link:hover {
+    text-decoration: underline;
+}
+.tags-header-link:active {
+    color: var(--accent-clr2);
+}

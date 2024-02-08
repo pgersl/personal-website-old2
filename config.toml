@@ -1,0 +1,161 @@
+baseURL = "https://pgersl.xyz/"
+title = "Petr Geršl"
+uglyURLs = false
+enableEmoji = true
+
+[frontmatter]
+    date = ['date', 'publishDate', 'lastmod']
+    expiryDate = ['expiryDate']
+    lastmod = [':git', 'lastmod', 'date', 'publishDate']
+    publishDate = ['publishDate', 'date']
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = "true"
+    [markup.tableOfContents]
+        ordered = true
+        startLevel = 0
+        endLevel = 3
+[outputs]
+    home = ['HTML', 'JSON', 'RSS']
+    page = ['HTML']
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+[languages]
+    [languages.en]
+        contentDir = "content/en"
+        disabled = false
+        languageCode = "en-US"
+        languageDirection = "ltr"
+        languageName = "English"
+        title = "Petr Geršl"
+        weight = 1
+        flag = "/media/img/base/en.png"
+        [languages.en.params]
+            description = "Personal website of Petr Geršl"
+        [languages.en.menu]
+            [[languages.en.menu.main]]
+                identifier = "about"
+                name = "About"
+                pageRef = "/about"
+                weight = 1
+            [[languages.en.menu.main]]
+                identifier = "articles"
+                name = "Articles"
+                pageRef = "/articles"
+                weight = 2
+            [[languages.en.menu.main]]
+                identifier = "gallery"
+                name = "Gallery"
+                pageRef = "/gallery"
+                weight = 3
+            [[languages.en.menu.main]]
+                identifier = "bio"
+                name = "Bio"
+                pageRef = "/bio"
+                weight = 4
+            [[languages.en.menu.sidebar]]
+                identifier = "notes"
+                name = "Notes"
+                url = "https://notes.pgersl.xyz"
+                weight = 1
+            [[languages.en.menu.sidebar]]
+                identifier = "music"
+                name = "Music"
+                url = "https://music.pgersl.xyz"
+                weight = 2
+            # [[languages.en.menu.sidebar]]
+            #     identifier = "business"
+            #     name = "Business"
+            #     url = "https://business.pgersl.xyz"
+            #     weight = 3
+    [languages.cs]
+        contentDir = "content/cs"
+        disabled = false
+        languageCode = "cs-CZ"
+        languageDirection = "ltr"
+        languageName = "Čeština"
+        title = "Petr Geršl"
+        weight = 2
+        flag = "/media/img/base/cs.png"
+        [languages.cs.params]
+            description = "Osobní webové stránka - Petr Geršl"
+        [languages.cs.menu]
+            [[languages.cs.menu.main]]
+                identifier = "about"
+                name = "O mně"
+                pageRef = "/cs/about"
+                weight = 1
+            [[languages.cs.menu.main]]
+                identifier = "articles"
+                name = "Članky"
+                pageRef = "/cs/articles"
+                weight = 2
+            [[languages.cs.menu.main]]
+                identifier = "gallery"
+                name = "Galerie"
+                pageRef = "/cs/gallery"
+                weight = 3
+            [[languages.cs.menu.main]]
+                identifier = "bio"
+                name = "Životopis"
+                pageRef = "/cs/bio"
+                weight = 4
+            [[languages.cs.menu.sidebar]]
+                identifier = "notes"
+                name = "Poznámky"
+                url = "https://notes.pgersl.xyz"
+                weight = 1
+            [[languages.cs.menu.sidebar]]
+                identifier = "music"
+                name = "Hudba"
+                url = "https://music.pgersl.xyz"
+                weight = 2
+            # [[languages.cs.menu.sidebar]]
+            #     identifier = "business"
+            #     name = "Služby"
+            #     url = "https://business.pgersl.xyz"
+            #     weight = 3
+    [languages.fr]
+        contentDir = "content/fr"
+        disabled = false
+        languageCode = "fr-FR"
+        languageDirection = "ltr"
+        languageName = "Français"
+        title = "Petr Geršl"
+        weight = 3
+        flag = "/media/img/base/fr.png"
+        [languages.fr.params]
+            description = "Le site web personnel de Petr Geršl"
+        [languages.fr.menu]
+            [[languages.fr.menu.main]]
+                identifier = "about"
+                name = "À propos"
+                pageRef = "/fr/about"
+                weight = 1
+            [[languages.fr.menu.main]]
+                identifier = "gallery"
+                name = "Galerie"
+                pageRef = "/fr/gallery"
+                weight = 3
+            [[languages.fr.menu.main]]
+                identifier = "bio"
+                name = "CV"
+                pageRef = "/fr/bio"
+                weight = 4
+            [[languages.fr.menu.sidebar]]
+                identifier = "notes"
+                name = "Notes"
+                url = "https://notes.pgersl.xyz"
+                weight = 1
+            [[languages.fr.menu.sidebar]]
+                identifier = "music"
+                name = "Musique"
+                url = "https://music.pgersl.xyz"
+                weight = 2
+            # [[languages.fr.menu.sidebar]]
+            #     identifier = "business"
+            #     name = "Affaires"
+            #     url = "https://business.pgersl.xyz"
+            #     weight = 3

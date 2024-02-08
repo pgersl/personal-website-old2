@@ -1,0 +1,46 @@
+<div class="search">
+    <div class="search-top">
+        <div class="search-top-text">
+            <span class="search-top-text-span">
+                {{if strings.HasPrefix .RelPermalink "/cs/"}}
+                    {{print "Prohledat pgersl.xyz"}}
+                {{else if strings.HasPrefix .RelPermalink "/fr/"}}
+                    {{print "Recherche sur pgersl.xyz"}}
+                {{else}}
+                    {{print "Search pgersl.xyz"}}
+                {{end}}
+            </span>
+        </div>
+        <div class="search-top-untoggle">
+            <button class="search-untoggle-btn" onclick="search.close()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+    <div class="search-bar">
+        <input class="search-bar-input">
+    </div>
+    <div class="search-not-found">
+        <div class="search-not-found-content">
+            {{if strings.HasPrefix .RelPermalink "/cs/"}}
+                    {{print "Omlouvám se, na pgersl.xyz nebylo nalezeno nic, co by se shodovalo s vaším vyhledáváním. Prosím, zkuste něco jiného."}}
+                {{else if strings.HasPrefix .RelPermalink "/fr/"}}
+                    {{print "Désolé, rien n'a été trouvé sur pgersl.xyz qui corresponde à votre recherche. Veuillez essayer autre chose."}}
+                {{else}}
+                    {{print "Sorry, nothing was found on pgersl.xyz that matches your search. Please, try something else."}}
+                {{end}}
+        </div>
+    </div>
+    <div class="search-cards"></div>
+    <template id="search-card-template">
+        <div class="search-card">
+            <a class="search-card-link" href="">
+                <div class="search-card-top">
+                    <div class="search-card-title"></div>
+                    <div class="search-card-date"></div>
+                </div>
+                <div class="search-card-content"></div>
+            </a>
+        </div>
+    </template>
+</div>

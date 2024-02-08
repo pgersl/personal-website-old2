@@ -1,0 +1,98 @@
+/*FIGURES*/
+
+.article-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em 0 2em 0;
+}
+figcaption {
+    max-width: 60%;
+}
+.figure-content-container {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 1em 2em 1em;
+    background-color: var(--bg-clr);
+    color: var(--accent-clr);
+    font-style: italic;
+    font-family: var(--sans);
+    font-size: var(--tiny-size);
+    text-align: center;
+    border: var(--border);
+    border-radius: 20px;
+
+}
+.figure-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.article-figure img {
+    height: auto;
+    width: 90%;
+    max-width: 350px;
+    max-height: 200px;
+    border-radius: 20px;
+}
+.figure-img-link {
+    text-decoration: none;
+    margin: 1em;
+    width: inherit;
+}
+.figure-img-link:hover img {
+    border: var(--border);
+}
+.figure-img-link:active img {
+    border-width: 4px;
+}
+
+/*ARTICLE FEATURES*/
+
+.article-feature-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#article-feature1-content, #article-feature2-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: var(--bg-clr);
+    border: var(--border);
+    border-radius: 20px;
+    padding: 1em;
+    margin: 1em 0;
+}
+.article-feature1-box-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.article-feature1-box {
+    width: 7vw;
+    max-width: 20px;
+    height: 7vw;
+    max-height: 20px;
+    margin: .5em;
+    border-radius: 5px;
+    border: solid 2px black;
+}
+.article-feature2-box {
+    margin-bottom: .5em;
+}
+.article-feature2-box:last-of-type {
+    margin-bottom: 0;
+}

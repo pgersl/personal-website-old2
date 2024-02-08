@@ -1,0 +1,173 @@
+/* BASIC LAYOUT*/
+
+main {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--txt-clr);
+}
+.page-header {
+    font-size: var(--header-size);
+    font-weight: bold;
+    padding-bottom: .6em;
+    color: var(--accent-clr4);
+    width: 100%;
+}
+.page-info {
+    color: var(--bg-clr4);
+    font-size: var(--tiny-size);
+    font-style: italic;
+    padding-bottom: 1.3em;
+}
+
+/* BASIC FEATURES*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    padding: .5em 0;
+    color: var(--accent-clr4);
+}
+h1, h2, h3, h4, h5 {
+    letter-spacing: 0px;
+}
+h1 {
+    font-size: var(--h1-size);
+    line-height: calc(var(--h1-size) * 1.15);
+}
+h2 {
+    font-size: var(--h2-size);
+    line-height: calc(var(--h2-size) * 1.15);
+}
+h3 {
+    font-size: var(--h3-size);
+    line-height: calc(var(--h3-size) * 1.15);
+}
+h4 {
+    font-size: var(--h4-size);
+    line-height: calc(var(--h4-size) * 1.15);
+}
+h5 {
+    font-size: var(--h5-size);
+    line-height: calc(var(--h5-size) * 1.15);
+}
+h6 {
+    font-size: var(--font-size);
+    line-height: calc(var(--font-size) * 1.15);
+    letter-spacing: 4px;
+}
+p {
+    padding-bottom: 1em;
+}
+p, .page-content ul, .page-content ol {
+    letter-spacing: 0px;
+    line-height: calc(var(--font-size) * 1.4);
+}
+blockquote {
+    background-color: var(--accent-clr5);
+    margin-bottom: 1em;
+    border-left: solid;
+    border-width: 5px;
+    border-color: var(--accent-clr);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--serif);
+}
+.quote-content {
+    padding: var(--font-size) var(--font-size) 0 calc(var(--font-size) * 2);
+    font-style: italic;
+}
+.quote-author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    color: var(--accent-clr2);
+    font-size: var(--tiny-size);
+    padding: 0 var(--font-size) var(--font-size) calc(var(--font-size) * 2);
+}
+code {
+    font-family: var(--mono);
+    color: var(--txt-clr);
+    padding: 4px;
+    border-radius: 5px;
+    background-color: var(--bg-clr2);
+}
+.page-content main p a, .page-content main li a {
+    color: var(--txt-clr);
+    text-decoration: underline;
+}
+.page-content main p a:hover, .page-content main li a:hover {
+    color: var(--accent-clr);
+}
+.page-content main p a:active, .page-content main li a:active {
+    color: var(--accent-clr2);
+}
+.page-content main > ul, .page-content main > ol {
+    list-style-position: inside;
+    font-family: var(--serif);
+    padding-bottom: .5em;
+}
+.page-content li {
+    padding-left: .5em;
+}
+.button-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: .5em;
+}
+.button-links-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.button-link {
+    padding: .4em .6em;
+    border: 2px solid var(--accent-clr);
+    border-radius: 400em;
+    font-weight: bold;
+    color: var(--txt-clr);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    margin: 0 1em .5em 0;
+}
+.button-link:hover {
+    background-color: var(--accent-clr);
+    color: var(--bg-clr);
+}
+.button-link:active {
+    background-color: var(--accent-clr2);
+    border-color: var(--accent-clr2);
+}
+.icon-link {
+    padding: .3em .6em;
+    border-radius: 400em;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--accent-clr);
+    color: var(--bg-clr);
+    width: fit-content;
+    transition: var(--transition);
+}
+.icon-link:hover {
+    background-color: var(--accent-clr2);
+}
+.icon-link:active {
+    background-color: var(--accent-clr3);
+}

@@ -1,0 +1,72 @@
+<div class="sidebar-content-container">
+    <div class="sidebar-content">
+        <div class="sidebar-untoggle">
+            <button class="sidebar-untoggle-btn">
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+        </div>
+        <div class="sidebar-content-title">
+            <a class="sidebar-content-title-link" href="{{.Site.BaseURL}}">
+                {{.Site.Title}}
+            </a>
+        </div>
+        <div class="sidebar-content-photo">
+            <img class="sidebar-content-photo-img" src="/media/img/base/me.png">
+        </div>
+        <div class="sidebar-content-navbar">
+            <nav class="sidebar-content-navbar-links">
+                {{range .Site.Menus.sidebar}}
+                    <div class="sidebar-content-navbar-link">
+                        <a class="sidebar-content-navbar-link-link" href="{{.URL}}">{{.Name}}</a>
+                    </div>
+                {{end}}
+            </nav>
+        </div>
+        <div class="sidebar-content-utils-container">
+            <div class="sidebar-content-utils">
+                <button id="theme-toggle-btn">
+                    <i class="theme-toggle-btn-icon fa-solid fa-sun"></i>
+                </button>
+                <button id="search-toggle-btn" onclick="search.showModal()">
+                    <i class="search-toggle-btn-icon fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            {{if .IsTranslated}}
+                <div class="sidebar-content-languages">
+                    {{range .Translations}}
+                        <a class="sidebar-content-languages-link" href="{{.Permalink}}">
+                            <img class="sidebar-content-languages-icon" src="/media/img/base/{{.Language.Lang}}.png">
+                        </a>
+                    {{end}}
+                </div>
+            {{end}}
+        </div>
+        <div class="sidebar-content-links-container">
+            <div class="sidebar-content-links">
+                <div class="sidebar-content-link">
+                    <a class="sidebar-content-link-link" href="https://github.com/pgersl" target="_blank">
+                        <i class="fa-brands fa-square-github"></i>
+                    </a>
+                </div>
+                <div class="sidebar-content-link">
+                    <a class="sidebar-content-link-link" href="https://www.linkedin.com/in/petr-ger%C5%A1l-9324491a6/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="sidebar-content-link">
+                    <a class="sidebar-content-link-link" href="https://pgersl.bandcamp.com/" target="_blank">
+                        <i class="fa-brands fa-bandcamp"></i>
+                    </a>
+                </div>
+                <div class="sidebar-content-link">
+                    <a class="sidebar-content-link-link" href="https://petrgersl.substack.com/" target="_blank">
+                        <i class="fa-solid fa-bookmark"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-content-info">
+
+        </div>
+    </div>
+</div>

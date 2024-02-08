@@ -1,0 +1,20 @@
+<div class="button-links">
+    <div class="button-links-content">
+        {{ if .Get "multiple" }}
+            {{$titles := split (.Get "title") ","}}
+            {{$links := split (.Get "href") ","}}
+            {{ range $index, $title := $titles }}
+                {{$linkIndex := add $index 1}}
+                {{ if le $linkIndex (len $links) }}
+                    <a class="button-link" href="{{ index $links $index }}">
+                        {{$title}}
+                    </a>
+                {{ end }}
+            {{ end }}
+        {{ else }}
+            <a class="button-link" href="{{ .Get "href" }}">
+                {{ .Get "title" }}
+            </a>
+        {{ end }}
+    </div>
+</div>

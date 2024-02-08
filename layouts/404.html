@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{partial "head.html" .}}
+    </head>
+    <body>
+        <div class="body-content-container">
+            <div class="body-content">
+                <div class="column" id="sidebar-column">
+                    <div class="sidebar">
+                        {{partial "sidebar.html" .}}
+                    </div>
+                </div>
+                <div class="column" id="nav-content-column">
+                    <div class="navbar">
+                        {{partial "navbar.html" .}}
+                    </div>
+                    <div class="page-content">
+                        <main>
+                            <div class="page-header">
+                                Error 404: Nothing was found!
+                            </div>
+                            <p>It seems that you've stumbled across a broken link or a page that doesn't exist, yet.</p>
+                            <p><a href="{{.Site.BaseURL}}">Go home</a></p>
+                        </main>
+                        <footer>
+                            {{partial "footer.html" .}}
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <dialog id="search">
+            {{partial "search.html" .}}
+        </dialog>
+    </body>
+</html>

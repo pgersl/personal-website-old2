@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{partial "head.html" .}}
+    </head>
+    <body>
+        <div class="body-content-container">
+            <div class="body-content">
+                <div class="column" id="sidebar-column">
+                    <div class="sidebar">
+                        {{partial "sidebar.html" .}}
+                    </div>
+                </div>
+                <div class="column" id="nav-content-column">
+                    <div class="navbar">
+                        {{partial "navbar.html" .}}
+                    </div>
+                    <div class="page-content">
+                        <div class="page-header">
+                            {{.Title}}
+                        </div>
+                        <main>
+                            {{if .Params.toc}}
+                                {{partial "toc.html" .}}
+                            {{end}}
+                            {{.Content}}
+                            <div class="auto-content">
+                                <div class="auto-content-container">
+                                    {{if eq .Params.list "articles"}}
+                                        {{range where .Site.Pages ".Params.type" "==" "article"}}
+                                            <div class="auto-content-item"> 
+                                                <a class="auto-content-item-link" href="{{.RelPermalink}}">{{.Title}}</a>
+                                                <div class="auto-content-item-date">{{.Date | time.Format "02/01/2006"}}</div>
+                                                <div class="auto-content-item-content">{{.Params.show}}</div>
+                                            </div>
+                                        {{end}}
+                                    {{end}}
+                                    {{if eq .Params.list "galleries"}}
+                                        {{range where .Site.Pages ".Params.type" "==" "gallery"}}
+                                            <div class="auto-content-gallery">
+                                                <a class="auto-content-gallery-link" href="{{.RelPermalink}}">
+                                                    <div class="auto-content-gallery-title-photo">
+                                                        <img src="{{.Params.show}}">
+                                                    </div>
+                                                    <div class="auto-content-gallery-wrapper">
+                                                        <div class="auto-content-gallery-title">{{.Title}}</div>
+                                                        <div class="auto-content-gallery-date">{{.Date | time.Format "02/01/2006"}}</div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        {{end}}
+                                    {{end}}
+                                </div>
+                            </div>
+                        </main>
+                        <footer>
+                            {{partial "footer.html" .}}
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <dialog id="search">
+            {{partial "search.html" .}}
+        </dialog>
+    </body>
+</html>
